@@ -18,7 +18,7 @@ Used by Step 3 of the `reviewing-code` skill.
 - Are there missing test files for the changes? (Compare changed source files to test directories.)
 - Do the changes follow existing patterns in the codebase?
 - **PHP:** Is DI used correctly? Are WordPress functions called via `WP\Functions`? Are entities/repositories following Doctrine patterns?
-- **Frontend:** Are components well-structured? Is state management appropriate? Are named exports used?
+- **Frontend:** Are components well-structured? Is state management appropriate? Are named exports used? Does new UI use `@wordpress/ui` where the component exists, and WPDS tokens (`--wpds-*`) in CSS?
 - **Other file types:** Are they written properly, named according the correct standards?
 - Is the code well-organized -- right files, right namespaces, right directories?
 - Are there any design concerns?

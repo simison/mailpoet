@@ -20,6 +20,7 @@ Development tasks are exposed as `pnpm` scripts at the repo root (`pnpm env:star
 
 - `kebab-case` for file names.
 - Components files are prefixed with underscore, to indicate, that they aren't compiled separately (`_new-component.scss`).
+- Use WordPress Design System tokens (`var(--wpds-*)`) for color, spacing, and typography. Look up token names with the design system MCP linked under JS Code.
 
 ## JS Code
 
@@ -27,6 +28,8 @@ Development tasks are exposed as `pnpm` scripts at the repo root (`pnpm env:star
 - Prefer named export before default export in JS and TS files
 - Default to TypeScript for new files.
 - Code formatting is handled automatically by Prettier. Run `pnpm format` to format your code.
+- New admin UI uses `@wordpress/ui` when that package exports the component. Use `@wordpress/components` for the editor, SlotFill, private APIs, and controls that `@wordpress/ui` does not export yet.
+- Configure the [WordPress design system MCP](https://github.com/WordPress/gutenberg/tree/trunk/packages/design-system-mcp) so editors can look up components and tokens.
 
 ## Disabling linting rules
 

@@ -49,6 +49,8 @@ Paths are relative to `mailpoet/`.
 - Call WordPress functions through `MailPoet\WP\Functions` (`$this->wp->…`), never directly, so code stays mockable.
 - Get services from the DI container (`lib/DI/`); don’t instantiate them directly.
 - New frontend files are TypeScript; prefer named exports.
+- New admin UI uses `@wordpress/ui` when that package exports the component. Use `@wordpress/components` for the editor, `SlotFill`, `privateApis`, and controls that `@wordpress/ui` does not export. Apply this to new work.
+- Style with WordPress Design System tokens (`--wpds-*`). When the [design system MCP](https://github.com/WordPress/gutenberg/tree/trunk/packages/design-system-mcp) is connected, look up the component and the token there before adding a control or a raw color.
 - Avoid regular expressions when string/array functions will do; if a regex is necessary, document it.
 - Avoid `eslint-disable` / `phpcs:ignore`; when unavoidable, add a comment explaining why.
 - Do not add features to the legacy Backbone newsletter editor (`assets/js/src/newsletter-editor/`); build on the block email editor.
